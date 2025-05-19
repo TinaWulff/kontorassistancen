@@ -1,17 +1,15 @@
 
 header {
-    margin: 1em 4em;
-
-    display: grid;
-    grid-template-columns: auto 5fr auto;
-    justify-content: center;
+    margin: 1em 6em;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-
 
 nav ul{
     display: flex;
     justify-content: space-around;
     font-family: "poppins", sans-serif;
+    gap: 2em;
 
     margin: 0;
 

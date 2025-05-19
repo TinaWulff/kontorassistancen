@@ -1,0 +1,27 @@
+
+
+.section__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+  
+
+    h2 {
+        font-size: 40px;
+        font-family: "DM Serif Display", serif;
+    }
+
+    p {
+        font-size: 14px;
+        font-family: "Poppins", sans-serif
+    }
+}
+
+.Txt__centered {
+    align-items: center;
+    padding: 5em 0;
+    width: 50%;
+    text-align: center;
+
+}

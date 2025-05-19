@@ -3,11 +3,32 @@
   width: fit-content;
   border-radius: 7px;
   border: none;
-  color: #ffffff;
-  background: #000000;
+
   padding: 1em 1.5em;
 
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
+  font-weight: 600;
 }
+  .btn__light {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .btn__dark {
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+
+    .btn__hero{
+      margin-top: 0.5em;
+      width: 80%;
+      align-self: center;
+  }
+
+  }

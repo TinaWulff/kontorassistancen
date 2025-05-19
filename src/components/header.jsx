@@ -20,7 +20,7 @@ export default function Header() {
             </ul>
         </nav>
 
-        <LinkButton className="button__dark">
+        <LinkButton className="btn__dark">
         Book et møde
         </LinkButton>
         </>

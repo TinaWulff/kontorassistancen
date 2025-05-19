@@ -15,8 +15,16 @@ ul {
     list-style: none;
 }
 
+main {
+    display: grid;
+}
 
+.section__color {
 
+    background: #f8dd9f;
+    display: grid;
+    justify-items: center;
+}
 
 
 
