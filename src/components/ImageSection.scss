@@ -1,0 +1,29 @@
+
+.split__section {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+column-gap: 3em;
+margin: 10em;
+align-items: center;
+line-height: 1.5;
+
+img {
+    width: 100%;
+}
+}
+
+.image__right {
+
+    img {
+        grid-column: 2/3;
+        grid-row: 1;
+  
+    }
+
+    h2, p, button {
+    grid-column: 1;
+    }
+
+}
+
+

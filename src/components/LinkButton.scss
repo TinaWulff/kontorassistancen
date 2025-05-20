@@ -1,10 +1,10 @@
 
-.button-link {
+.button-link, button {
   width: fit-content;
   border-radius: 7px;
   border: none;
 
-  padding: 1em 1.5em;
+  padding: 0.8em 2em;
 
   font-size: 14px;
   font-family: "Poppins", sans-serif;
@@ -16,9 +16,13 @@
     background-color: #fff;
   }
 
-  .btn__dark {
+  .btn__dark, button  {
     color: #ffffff;
     background-color: #000000;
+  }
+
+  button {
+   align-self: end;
   }
 
 

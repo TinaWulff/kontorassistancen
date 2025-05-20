@@ -1,0 +1,68 @@
+
+
+.form__section {
+    background-color: #f8dd9f;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+    padding: 10em;
+
+    div {
+        flex: 1;
+    }
+
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        flex: 1;
+
+        input {
+        padding-left: 0.5em;
+        border: none;
+        border-radius: 5px;
+        height: 2em;
+        font-family: "poppins", sans-serif;
+        font-size: 16px;
+        color: #000;
+
+        }
+
+        textarea {
+            padding-left: 0.5em;
+            border: none;
+            border-radius: 5px;
+            font-family: "poppins", sans-serif;
+            padding-top: 0.5em;
+            font-size: 16px;
+            color: #000;
+            min-height: 4em;
+            height: auto;
+        }
+
+        button {
+
+        }
+    }
+
+    h2 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 1em;
+        font-weight: 500;
+        font-size: 24px;
+
+    }
+
+    p {
+        font-family: "poppins", sans-serif;
+        font-size: 16px;
+        margin-bottom: 1em;
+    }
+}
