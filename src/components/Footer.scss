@@ -1,16 +1,26 @@
 
 footer {
     padding: 8em;
-    padding-left: 10em;
+    padding-left: 9em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-self: center;
+    column-gap: 2em;
 
     background-color: #000;
     color: #fff;
 
+    @media (max-width: 1100px) {
+
+        padding: 5rem;
+        //padding-left: 6rem;
+        
+    }
+
 
     div {
+
+        grid-column: 1;
 
         p, ul {
             font-family: "Poppins", sans-serif;
@@ -38,6 +48,11 @@ footer {
         font-family: "DM Serif Display", serif;
         font-size: 1.8rem;
 
+        @media (max-width:1000px) {
+            font-size: 1.5rem;
+            
+        }
+
     }
 
 
@@ -46,6 +61,7 @@ footer {
         grid-column: span 3;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 2em;
 
         ul {
             font-family: "Poppins", sans-serif;

@@ -41,7 +41,7 @@ export default function FormSection() {
                     />
 
                     <button type="submit" name="send" id="send">
-                        Kontak os
+                        Kontakt os
                     </button>
             </form>
 
