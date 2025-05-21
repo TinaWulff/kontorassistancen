@@ -41,6 +41,10 @@ nav {
     justify-items: center;
     column-gap: 3em;
 
+    @media (max-width:1200px) {
+        margin-left: 1.5em;
+    }
+
     .button-link {
         grid-column: 2;
         justify-self: end;
@@ -92,7 +96,15 @@ img {
     order: 3;
  }
 
+
  .menu-icon {
     order: 0;
  }
+}
+
+@media screen and (max-width: 599px) {
+.btn__header {
+   
+        display: none;
+    }
 }

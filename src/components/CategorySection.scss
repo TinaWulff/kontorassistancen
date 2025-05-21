@@ -29,6 +29,10 @@ div a {
         font-size: 32px;
     }
 
+    @media (max-width: 799px) {
+        font-size: 24px;
+    }
+
 
     .column1 {
         grid-column: 1;
@@ -62,4 +66,23 @@ div a {
         z-index: 2;
     }
 }
+}
+
+@media screen and (max-width: 699px) {
+    
+    .section__categories {
+    grid-template-columns: 1fr;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 1/1.33;
+        height: 100px;
+        object-fit: cover;
+
+    }
+
+}
+
+
 }

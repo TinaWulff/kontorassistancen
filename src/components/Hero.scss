@@ -26,15 +26,10 @@
 
         color: #ffffff;
 
-        @media (max-width: 1100px) {
-
-            margin-left: 5rem;
-            
-        }
-
-        @media (max-width:1100px) {
+        @media (max-width:1250px) {
             grid-area: 1/1/2/-1;
             width: 70%;
+            margin-left: 5rem;
         }
 
         @media (max-width:600px) {
@@ -42,13 +37,24 @@
             margin: 0 3em;
         }
 
+        @media (max-width:499px) {
+            width: 100%;
+            align-items: center;
+     
+        }
+
 
         h1 {
             font-size: 48px;
             max-width: 100%;
 
+            @media (max-width:1250px) {
+                width: 70%;
+            }
+
             @media (max-width:800px) {
                 font-size: 32px;
+                width: 90%;
             }
 
             @media (max-width: 370px) {
@@ -61,6 +67,10 @@
             font-size: 18px;
             font-family: "Poppins", sans-serif;
             font-weight: 300;
+
+            @media (max-width:1250px) {
+                width: 70%;
+            }
 
             @media (max-width:800px) {
                 font-size: 16px;

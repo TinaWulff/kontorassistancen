@@ -6,6 +6,7 @@ import LinkButton from './LinkButton';
 
 import { HiOutlineMenu } from "react-icons/hi";
 
+
 export default function Header() {
 
 
@@ -24,7 +25,7 @@ export default function Header() {
                     <li><a href="#">Menupunkt #5</a></li>
 
                 </ul>
-                <LinkButton className="btn__dark">
+                <LinkButton className="btn__dark btn__header">
                     Book et møde
                 </LinkButton>
                 <div className="menu-icon" ><HiOutlineMenu /></div>
