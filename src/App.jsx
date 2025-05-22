@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Styles/Style.scss';
 
-import Header from './components/Header.jsx'
-import Hero from './components/Hero.jsx'
-import TextSection from './components/TextSection.jsx'
+import Header from './components/Header$.jsx';
+import Hero from './components/Hero$.jsx';
+import TextSection from './components/TextSection.jsx';
 import ImageSection from './components/ImageSection.jsx';
 import Footer from './components/Footer';
 
