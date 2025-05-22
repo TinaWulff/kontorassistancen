@@ -8,15 +8,18 @@
     display: flex;
     gap: 4em;
     justify-content: center;
-    padding: 9rem;
+    padding: 9rem clamp(4rem, 10vw, 8rem); //sidste før 9
 
-    @media (max-width: 1150px) {
+   /*   @media (max-width: 1150px) {
         padding: 5rem;
+        padding: 9rem clamp(4rem, 5vw, 9rem);
     }
-    @media (max-width: 699px) {
-        padding: 3rem 2rem;
+ */
+    @media (max-width: 899px) {
+        //padding: 3rem 2rem;
         //padding: 2rem 1rem; 
-    }
+        padding: 6rem clamp(1rem, 5vw, 6rem);
+    } 
 
     div {
         flex: 1;

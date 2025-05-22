@@ -24,10 +24,21 @@
             justify-items: center;
             color: $light;
             font-size: 48px;
+            //position: absolute; //
+            position: relative;
+            z-index: 1;;
 
             &:hover {
                 transform: scale(1.1);
                 transition: transform 0.5 ease;
+                z-index: 10;;
+
+
+                @media (max-width: 899px) {
+                    transform: none;
+                    transition: none;
+                }
+
             }
 
             @media (max-width: 1400px) {
@@ -87,7 +98,6 @@
             //aspect-ratio: 1/1.33;
             height: 100px;
             object-fit: cover;
-
         }
 
     }

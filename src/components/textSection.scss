@@ -11,21 +11,21 @@
     h2 {
         font-size: 46px;
 
-            @media (max-width: 1170px) {
-                font-size: 36px;
+        @media (max-width: 1170px) {
+            font-size: 36px;
         }
     }
 
     p {
-        font-size: 14px;    //I recommend changing to size 16px for screen for better readability on screen
+        font-size: 14px; //I recommend changing to size 16px for screen for better readability on screen
         line-height: 1.3;
     }
 }
 
 .Txt__centered {
     align-items: center;
-    padding: 8em 0;
-    width: 40%;
+    padding: 9rem clamp(4rem, 10vw, 8rem);
+    width: 60%;
     text-align: center;
     margin: 0 3em;
 
@@ -36,21 +36,24 @@
             font-size: 36px;
         }
     }
-    
-    @media (max-width: 1150px) {
+
+    /*   @media (max-width: 1150px) {
         padding: 5em 0;
-    }
-    @media (max-width: 699px) {
+    } */
+    /*   @media (max-width: 699px) {
         padding: 3em 0;
+    } */
+    @media (max-width: 899px) {
+        padding: 6rem clamp(1rem, 5vw, 6rem);
     }
 
     @media (max-width: 530px) {
         width: 100%;
         gap: 1em;
-        padding: 3em 2em;
+        //padding: 3em 2em;
 
-        p{
-            max-width: 80%;
+        p {
+            max-width: 90%;
         }
     }
 }
