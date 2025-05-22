@@ -1,6 +1,8 @@
 @use "../Styles/_variables.scss" as *;
 
 footer {
+    width: 100%;
+    max-width: 100%;
     padding: 8em;
     padding-left: 9em;
     display: grid;

@@ -48,6 +48,7 @@ header {
 
 
         ul.menu {
+
             grid-column: 1;
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -56,6 +57,7 @@ header {
             margin: 0;
             margin-left: 1em;
 
+        
             li {
                 font-size: 14px;
             }
@@ -146,6 +148,14 @@ header {
             display: none;
         }
 
-    }
-
-}
+        .menu-icon {
+            font-size: 2em;
+          }
+      
+          ul.menu {
+            width: 100%;
+            padding: 4em 1em;
+          }
+        }
+      }
+    
