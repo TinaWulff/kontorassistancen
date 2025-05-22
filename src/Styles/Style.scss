@@ -1,0 +1,40 @@
+@use "_variables.scss" as *;
+@use "fonts.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: $font-stack;
+
+    main {
+        display: grid;
+    }
+}
+
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+
+h1, h2, h3 {
+    font-family: $font-headings;
+}
+
+.section__color {
+    background: $color;
+    display: grid;
+    justify-items: center;
+}
+
+

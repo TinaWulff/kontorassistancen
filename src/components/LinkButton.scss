@@ -1,0 +1,55 @@
+@use "../Styles/_variables.scss" as *;
+
+.button-link, button {
+  width: fit-content;
+  border-radius: 7px;
+  border: none;
+
+  padding: 0.8em 2em;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+  height: 2.5em;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.3);
+    scale: 1.05;
+    transition: all 0.2s ease-in-out;
+  }
+}
+  .btn__light {
+    color: $dark;
+    background-color: $light;
+  }
+
+  .btn__dark, button  {
+    color: $light;
+    background-color: $dark;
+  }
+
+  button {
+   align-self: end;
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+
+    .button-link, button {
+      width: 100%;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3em;
+    }
+
+    .btn__hero{
+      margin-top: 0.5em;
+      width: 80%;
+      align-self: center;
+  }
+  }
