@@ -2,6 +2,8 @@
 import './FormSection.scss';
 import './LinkButton.scss';
 
+import ContactForm from './Form';
+
 export default function FormSection() {
 
 
@@ -15,35 +17,7 @@ export default function FormSection() {
             <p>Please complete the following fields.</p>
           </div>
 
-        
-          <form id="contactform" className="form" action="#" method="get">
-                    <input
-                    type="text"
-                    name="fullname"
-                    id="fullname"
-                    placeholder="Dit navn*"
-                    />
-
-                    <input type="text"
-                    name="email"
-                    id="email"
-                    placeholder="Din email*"
-                    />
-
-                    <input type="text"
-                    name="Phone number"
-                    placeholder="Telefonnummer"
-                    />
-
-                    <textarea name="message"
-                    id="message"
-                    placeholder="Eventuel besked*"
-                    />
-
-                    <button type="submit" name="send" id="send">
-                        Kontakt os
-                    </button>
-            </form>
+        <ContactForm />
 
         </section>
     )
