@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import './Header.scss';
+import './header.scss';
 import Logo from '../assets/rooster-logo.png';
-import LinkButton from './LinkButton';
+import LinkButton from './LinkButton.jsx';
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 

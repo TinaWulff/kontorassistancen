@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaSquarePinterest } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 
-import './Footer.scss';
+import './footer.scss';
 
 //import { NavLink } from "react-router";
 

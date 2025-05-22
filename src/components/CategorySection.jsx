@@ -2,7 +2,7 @@ import YdelserImg from '../assets/ydelser.jpg';
 import ServiceImg from '../assets/service.jpg';
 import KontaktImg from '../assets/kontaktos.jpg';
 
-import './CategorySection.scss';
+import './categorySection.scss';
 
 
 export default function CategorySection() {

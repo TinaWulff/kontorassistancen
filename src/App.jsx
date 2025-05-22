@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Styles/Style.scss';
+import './Styles/style.scss';
 
 import Header from './components/Header$.jsx';
 import Hero from './components/Hero$.jsx';
@@ -8,7 +8,7 @@ import TextSection from './components/TextSection.jsx';
 import ImageSection from './components/ImageSection.jsx';
 import Footer from './components/Footer';
 
-import './components/ImageSection.scss';
+import './components/imageSection.scss';
 
 //Images:
 import SeaImage from './assets/splitsektion-1.jpg';

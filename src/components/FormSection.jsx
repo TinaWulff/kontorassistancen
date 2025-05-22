@@ -1,8 +1,8 @@
 
-import './FormSection.scss';
-import './LinkButton.scss';
+import './formSection.scss';
+import './linkButton.scss';
 
-import ContactForm from './Form';
+import ContactForm from './Form.jsx';
 
 export default function FormSection() {
 

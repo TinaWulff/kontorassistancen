@@ -1,5 +1,5 @@
 import LinkButton from "./LinkButton";
-import './TextSection.scss';
+import './textSection.scss';
 
 //Class-names: Txt__centered, Txt__start, section__text
 

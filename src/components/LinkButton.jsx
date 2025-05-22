@@ -1,5 +1,5 @@
 
-import './LinkButton.scss';
+import './linkButton.scss';
 
 export default function LinkButton( {children, className =""} ) {
 

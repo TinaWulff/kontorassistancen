@@ -2,7 +2,7 @@
 import HeroImg from '../assets/topbillede.jpg';
 import LinkButton from './LinkButton';
 
-import './Hero.scss';
+import './hero.scss';
 
 export default function Hero() {
 

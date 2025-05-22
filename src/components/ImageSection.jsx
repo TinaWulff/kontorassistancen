@@ -1,6 +1,6 @@
 //import LinkButton from "./LinkButton";
-import TextSection from "./TextSection";
-import './ImageSection.scss';
+import TextSection from "./TextSection.jsx";
+import './imageSection.scss';
 
 //Class-names: split__section, image__left, image__right
 
