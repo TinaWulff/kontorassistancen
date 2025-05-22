@@ -1,110 +1,151 @@
+@use "../Styles/_variables.scss" as *;
 
 header {
     width: 100%;
     max-width: 100%;
-
     padding: 1em 9rem;
 
-    
     display: grid;
-    grid-template-columns: 120px 7fr;
+    grid-template-columns: 120px 6fr auto;
     align-items: center;
 
-
     @media (max-width: 1100px) {
-
         padding: 1rem 5rem;
-        
     }
+
     .menu-icon {
         display: none;
 
-        img {
-        align-self: center;
-        }
-
-        @media (max-width: 1100px) {
+        @media (max-width: 1000px) {
             display: block;
             cursor: pointer;
             font-size: 2.5em;
-            grid-column: 2;
+            grid-column: 3;
             grid-row: 1;
+            justify-self: end;
             margin-top: 0.25em;
-            
+            z-index: 111;
+
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        &.open {
+            transform: rotate(90deg); /* Roter ikonet, når menuen er åben */
+            opacity: 0.8; /* Ændr opacitet for en subtil effekt */
         }
     }
 
-nav {
-    display: grid;
-    grid-template-columns: 5fr auto;
-    align-items: center;
-    justify-items: center;
-    column-gap: 3em;
+    nav {
+        display: grid;
+        grid-template-columns: 5fr;
+        align-items: center;
+        justify-items: center;
+        column-gap: 3em;
 
-    @media (max-width:1200px) {
-        margin-left: 1.5em;
+        @media (max-width:1200px) {
+            margin-left: 1.5em;
+        }
+
+
+        ul.menu {
+            grid-column: 1;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-items: center;
+            column-gap: 3em;
+            margin: 0;
+            margin-left: 1em;
+
+            li {
+                font-size: 14px;
+            }
+
+            @media (max-width: 1300px) {
+                column-gap: 1.5em;
+            }
+
+            @media (max-width: 1000px) {
+
+                display: flex; 
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 300px;
+                height: max-content;
+                background-color: $color;
+                flex-direction: column;
+                align-items: end;
+                box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7);
+                z-index: 10;
+                overflow: hidden;
+                overflow-x: hidden;
+                padding: 6em 0 7em;
+                padding-right: 3em;
+                padding-top: 8em;
+                gap: 2em;
+                
+                border-bottom-left-radius: 300px;
+                border-top-left-radius: 300px;
+                transform: translateX(100%); /* Start uden for skærmen */
+                transition: transform 0.5s ease-in-out;
+
+                li {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin: 0.5em 0;
+                }
+
+                &.open { //Vis menuen, når den er åben/klikket på
+                    transform: translateX(0);
+
+                }
+            }
+        }
+
+        img {
+            justify-self: center;
+        }
+
     }
 
     .button-link {
-        grid-column: 2;
+        grid-column: 3;
         justify-self: end;
         align-self: center;
+        grid-row: 1;
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1000px) {
             grid-column: 1;
             grid-row: 1;
         }
     }
+}
 
-    ul{
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    column-gap: 3em;
-    
-    font-family: "poppins", sans-serif;
-  
+@media screen and (max-width: 1000px) {
 
-    margin: 0;
-    margin-left: 1em;
-
-    li {
-        font-size: 14px;
+    .button-link.btn__header {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        margin-right: 5em;
     }
 
-    @media (max-width: 1300px) {
-    column-gap: 1.5em;
+
+    .menu-icon {
+        grid-column: 2;
+        justify-self: end;
     }
-
-    @media (max-width: 1100px) {
-    display: none;
-        
-    } 
-}
-
-img {
-    justify-self: center;
-}
-
-}
-}
-
-@media screen and (max-width: 1100px) {
-
- .button-link {
-    order: 3;
- }
-
-
- .menu-icon {
-    order: 0;
- }
 }
 
 @media screen and (max-width: 599px) {
-.btn__header {
-   
-        display: none;
+    header {
+        padding: 1em 1em;
+
+
+        .btn__header {
+            display: none;
+        }
+
     }
+
 }

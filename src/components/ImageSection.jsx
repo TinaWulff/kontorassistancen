@@ -13,8 +13,7 @@ export default function ImageSection({ className = "", image }) {
             <img src={image} alt="illustrative image" />
             <TextSection
                 h2="Modern Refinement"
-                text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel maxime eos dit sint minus, placeat rerum. Enim, tempora laudantium! Voluptatem cum vero, perspiciatis praesentium ullam consectetur necessitatibus quis.
-                Dolore nihil consectetur voluptas rerum perferendis? Pobcaect eaque sapiente rerum sequi harum!"
+                text="Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige."
             >
             Transforming Society Together
             </TextSection>

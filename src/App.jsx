@@ -1,6 +1,6 @@
+import React from 'react';
 
-
-import './Style.scss';
+import './Styles/Style.scss';
 
 import Header from './components/header'
 import Hero from './components/hero'
@@ -34,11 +34,8 @@ function App() {
         <TextSection 
         className='Txt__centered'
         h2="Pursuit of excellence"
-        text="The idea of form follows function,
-        a guiding credo ipsum dolor sit amet consectetur adipisicing elit.
-        Velit unde veritatis ipsam nulla molestias inventore sint eaque deserunt.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        "></TextSection>
+        text='The idea of "form follows function", a principle associated with the modernist design movement, was the starting place for our Voda collection. Its classic geometry and clean finishes unite into an industrial modern style, crafted for Australian living.. 
+        '></TextSection>
         </section>
 
         <ImageSection

@@ -1,3 +1,4 @@
+@use "../Styles/_variables.scss" as *;
 
 .button-link, button {
   width: fit-content;
@@ -7,12 +8,10 @@
   padding: 0.8em 2em;
 
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1;
   height: 2.5em;
-  // width: 12em;
 
   &:hover {
     cursor: pointer;
@@ -22,13 +21,13 @@
   }
 }
   .btn__light {
-    color: #000;
-    background-color: #fff;
+    color: $dark;
+    background-color: $light;
   }
 
   .btn__dark, button  {
-    color: #ffffff;
-    background-color: #000000;
+    color: $light;
+    background-color: $dark;
   }
 
   button {
@@ -39,10 +38,18 @@
   @media screen and (max-width: 500px) {
 
 
+    .button-link, button {
+      width: 100%;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3em;
+    }
+
     .btn__hero{
       margin-top: 0.5em;
       width: 80%;
       align-self: center;
   }
-
   }
