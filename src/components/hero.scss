@@ -8,7 +8,6 @@
     grid-template-columns: 1fr 1fr;
 
 
-
     img {
         grid-area: 1/1/2/-1;
         width: 100%;
@@ -18,7 +17,6 @@
     .hero__text {
         max-width: 100%;
         margin-left: 9rem;
-
         grid-area: 1/1/2/2;
         order: 1;
 
@@ -28,6 +26,13 @@
         gap: 1em;
 
         color: $light;
+
+
+        @media screen and (min-width: 1800px) { // big screens
+            padding: 9rem 0 9rem clamp(12rem, 15vw, 25rem);
+            margin: unset;
+        }
+    
 
         @media (max-width:1250px) {
             grid-area: 1/1/2/-1;

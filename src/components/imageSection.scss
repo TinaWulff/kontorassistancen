@@ -10,6 +10,20 @@
     line-height: 1.5;
     max-width: 100%;
 
+
+    @media screen and (min-width: 1800px) {         //big screens
+        padding: 9rem clamp(12rem, 15vw, 25rem);
+        margin: unset;   
+        column-gap: 5%;  
+    }
+
+        @media screen and (min-width: 1600px) { 
+        p {
+            max-width: 80%;
+        }
+    }
+
+
  
     @media (max-width: 1150px) {
         margin: 6rem;

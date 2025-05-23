@@ -10,14 +10,12 @@
     justify-content: center;
     padding: 9rem clamp(4rem, 10vw, 8rem); //sidste før 9
 
-   /*   @media (max-width: 1150px) {
-        padding: 5rem;
-        padding: 9rem clamp(4rem, 5vw, 9rem);
+    @media screen and (min-width: 1800px) {
+        padding: 9rem clamp(12rem, 15vw, 25rem);
+        gap: 5%;
     }
- */
+
     @media (max-width: 899px) {
-        //padding: 3rem 2rem;
-        //padding: 2rem 1rem; 
         padding: 6rem clamp(1rem, 5vw, 6rem);
     } 
 
