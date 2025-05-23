@@ -1,6 +1,7 @@
 @use "_variables.scss" as *;
 @use "fonts.scss" as *;
 
+
 * {
     margin: 0;
     padding: 0;
@@ -22,12 +23,14 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    margin: 0 auto;
 
     main {
         display: grid;
         max-width: 100%;
     }
 }
+
 
 img {
     width: 100%;
