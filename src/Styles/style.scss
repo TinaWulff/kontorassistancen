@@ -17,6 +17,7 @@ html {
   }
 
 body {
+    background-color: $light;
     font-family: $font-stack;
     margin: 0;
     padding: 0;
@@ -28,6 +29,10 @@ body {
     main {
         display: grid;
         max-width: 100%;
+    }
+
+    p {
+        margin-bottom: 1em;
     }
 }
 
@@ -52,10 +57,23 @@ h1, h2, h3 {
     font-family: $font-headings;
 }
 
-.section__color {
+
+
+/* .section__color {
     background: $color;
     display: grid;
     justify-items: center;
-}
+
+/*     .button-link {
+        grid-row: 1;
+    } 
+
+    align-items: center;
+    padding: 9rem clamp(4rem, 10vw, 8rem);
+    width: 60%;
+    text-align: center;
+   // margin: 0 1em;
+
+} */
 
 

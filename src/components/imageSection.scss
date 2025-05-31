@@ -23,8 +23,6 @@
         }
     }
 
-
- 
     @media (max-width: 1150px) {
         margin: 6rem;
     }
@@ -35,6 +33,8 @@
 
     @media (max-width: 799px) {
         grid-template-columns: 1fr;
+        column-gap: 0;
+        
     }
 
 
@@ -44,21 +44,43 @@
     }
 
 
-
     img {
         width: 100%;
         max-width: 100%;
+        margin-bottom: 3em;
+        aspect-ratio: 1.33/1;
+        object-fit: cover;
+
+        @media (max-width: 1300px) {
+            align-self: flex-start;
+        }
 
         @media (max-width: 799px) {
             margin-bottom: 2em;
+            grid-column: 1;
+            grid-row: 1;
         }
     }
-}
+
+    .section__text  {
+        @media (max-width: 799px) {
+            grid-column: 1; // Sørg for, at teksten også placeres i første kolonne
+            grid-row: 2; // Placer teksten under billedet
+            gap: 0;;
+        
+            h2 {
+                margin-bottom: 0.5em;
+            }
+
+        }
+    }
+    }
+
 
 .image__right {
 
     img {
-        grid-column: 2/3;
+        grid-column: 1;// 2/3;
         grid-row: 1;
 
 

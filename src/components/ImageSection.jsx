@@ -1,10 +1,10 @@
-//import LinkButton from "./LinkButton";
+import LinkButton from "./LinkButton";
 import TextSection from "./TextSection.jsx";
 import './imageSection.scss';
 
 //Class-names: split__section, image__left, image__right
 
-export default function ImageSection({ className = "", image }) {
+export default function ImageSection({ className = "", image, h2, textArray = [], linkTo, buttonText }) {
 
 
     return (
@@ -12,11 +12,17 @@ export default function ImageSection({ className = "", image }) {
         <section className={`split__section ${className}`}>
             <img src={image} alt="illustrative image" />
             <TextSection
-                h2="Modern Refinement"
-                text="Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige."
+                h2={h2}
+                text={
+                    textArray.map((paragraph, index) => <p key={index}>{paragraph}</p>)
+                }
             >
-            Transforming Society Together
             </TextSection>
+
+            <LinkButton
+            className="btn__dark"
+            linkto ={linkTo}>
+                {buttonText}</LinkButton>
         </section>
     )
 }

@@ -77,7 +77,7 @@ export default function ContactForm() {
 
                 {/* Send-knap */}
                 <button type="submit" name="send" id="send">
-                    Kontakt os
+                    Send besked
                 </button>
             </form>
             {/* Succesbesked */}

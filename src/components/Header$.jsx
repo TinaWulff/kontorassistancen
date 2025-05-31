@@ -4,6 +4,8 @@ import './header.scss';
 import Logo from '../assets/rooster-logo.png';
 import LinkButton from './LinkButton.jsx';
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 
 
 export default function Header() {
@@ -14,22 +16,16 @@ export default function Header() {
     };
     return (
         <>
-            <img src={Logo} alt="Rooster logo" />
+            <h2>Kontorassistancen</h2>
 
             <nav>
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
-                    <li><a href="#">Menupunkt #1</a></li>
-                    <li><a href="#">Menupunkt #2</a></li>
-                    <li><a href="#">Menupunkt #3</a></li>
-                    <li><a href="#">Menupunkt #4</a></li>
-                    <li><a href="#">Menupunkt #5</a></li>
-
+                    <li><NavLink to="/{:id}">Lønkørsel</NavLink></li>
+                    <li><NavLink to="/{:id}">Momsregnskab</NavLink></li>
+                    <li><NavLink to="/{:id}">Online Bogføring</NavLink></li>
+                    <li><NavLink to="/{:id}">Kontakt</NavLink></li>
                 </ul>
-            
             </nav>
-                <LinkButton className="btn__dark btn__header">
-                    Book et møde
-                </LinkButton>
             
             <div
             className={`menu-icon ${menuOpen ? 'open' : ''}`}

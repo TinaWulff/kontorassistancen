@@ -1,14 +1,15 @@
 
 import './linkButton.scss';
+import { Link } from 'react-router';
 
-export default function LinkButton( {children, className =""} ) {
+export default function LinkButton( {children, className ="", linkto} ) {
 
 
     return (
         <>
-        <a href="#formular" className={`button-link ${className}`}>
+        <Link to={linkto} className={`button-link ${className}`}>
             {children}
-        </a>
+        </Link>
         </>
     )
 }

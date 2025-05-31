@@ -11,10 +11,10 @@ export default function FormSection() {
 
         <section id="formular" className='form__section'>
           <div>
-            <h2>Get in Touch</h2>
-            <h3>We are awwwards and we are here to serve! <br />How can we help you?</h3>
-            <p>If you have any questions, please contact us through this form.</p>
-            <p>Please complete the following fields.</p>
+            <h2>Tag kontakt</h2>
+            <h3>Kontorassistancen er klar til at hjælpe dig!<br />Få et tilbud eller book et møde!</h3>
+            <p>Har du spørgsmål til nærmere afklaring om jeg er den rette til at hjælpe netop din virksomhed, så tøv ikke med at skrive til mig.</p>
+            <p>Udfyld formularen og jeg vil vende tilbage til dig hurtigst muligt.</p>
           </div>
 
         <ContactForm />

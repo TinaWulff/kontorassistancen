@@ -1,34 +1,35 @@
-import YdelserImg from '../assets/ydelser.jpg';
-import ServiceImg from '../assets/service.jpg';
-import KontaktImg from '../assets/kontaktos.jpg';
+import MomsImg from '../assets/img/moms.jpg';
+import LønImg from '../assets/img/lonkorsel.jpg';
+import BogføringImg from '../assets/img/onlinebogforing.png';
 
 import './categorySection.scss';
+import { Link } from 'react-router';
 
 
 export default function CategorySection() {
     return (
-<section className='section__categories'>
-    <div className='column1'>
-        <a href="#">
-        <img src={YdelserImg} alt="illustrative image" />
-        <h2>Ydelser</h2>
-        </a>
-    </div>
+        <section className='section__categories'>
+            <div className='column1'>
+                <Link to="/momsregnskab">
+                    <img src={MomsImg} alt="illustrative image" />
+                    <h2>Momsregnskab</h2>
+                </Link>
+            </div>
 
-    <div className='column2'>
-        <a href="#">
-        <img src={ServiceImg} alt="illustrative image" />
-        <h2>Service</h2>
-        </a>
-    </div>
+            <div className='column2'>
+                <Link to="/lonkorsel">
+                    <img src={LønImg} alt="illustrative image" />
+                    <h2>Lønkørsel</h2>
+                </Link>
+            </div>
 
-    <div className='column3'>
-    <a href="#">
-    <img src={KontaktImg} alt="illustrative image" />
-    <h2>Kontakt os</h2>
-    </a>
-    </div>
-</section>
+            <div className='column3'>
+                <Link to="/onlinebogforing">
+                    <img src={BogføringImg} alt="illustrative image" />
+                    <h2>Online Bogføring</h2>
+                </Link>
+            </div>
+        </section>
 
     )
 }

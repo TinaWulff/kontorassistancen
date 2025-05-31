@@ -6,11 +6,18 @@ header {
     padding: 1em 9rem;
 
     display: grid;
-    grid-template-columns: 120px 6fr auto;
+    grid-template-columns: min-content 6fr;
     align-items: center;
     position: relative;
+    background-color: $light;
 
-    @media screen and (min-width: 1800px) {         // big screens
+    h2 {
+        color: $dark;
+        font-size: 32px;
+    }
+
+    @media screen and (min-width: 1800px) {
+        // big screens
         padding: 1rem clamp(12rem, 15vw, 25rem);
     }
 
@@ -35,8 +42,10 @@ header {
         }
 
         &.open {
-            transform: rotate(90deg); /* Roter ikonet, når menuen er åben */
-            opacity: 0.8; /* Ændr opacitet for en subtil effekt */
+            transform: rotate(90deg);
+            /* Roter ikonet, når menuen er åben */
+            opacity: 0.8;
+            /* Ændr opacitet for en subtil effekt */
         }
     }
 
@@ -53,19 +62,46 @@ header {
 
 
         ul.menu {
-
+            justify-self: end;
             grid-column: 1;
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, auto);
             justify-items: center;
-            column-gap: 3em;
+            column-gap: 3.5em;
             margin: 0;
             margin-left: 1em;
 
-        
+
             li {
-                font-size: 14px;
+                position: relative;
+                font-size: 16px;
+                font-weight: 500;
+
+
+                &:hover {
+                    cursor: pointer;
+                    color: $btn-color;
+                    transition: color 0.3s ease-in-out;
+                }
+
+                // Underline-effekt
+                &::after {
+                    content: ''; // Pseudo-element til underlinjen
+                    position: absolute;
+                    bottom: -2px; // Placerer linjen lige under teksten
+                    left: 0;
+                    width: 0; // Start med en bredde på 0
+                    height: 2px; // Højden på underlinjen
+                    background-color: $btn-color; // Samme farve som hover-teksten
+                    transition: width 0.3s ease-in-out; // Transition-effekt for bredden
+                }
+
+                &:hover::after {
+                    width: 100%; // Udvider linjen til at dække hele teksten ved hover
+                }
             }
+
+
 
             @media (max-width: 1300px) {
                 column-gap: 1.5em;
@@ -73,7 +109,7 @@ header {
 
             @media (max-width: 1000px) {
 
-                display: flex; 
+                display: flex;
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -94,11 +130,13 @@ header {
 
                 visibility: hidden;
                 opacity: 0;
-                
+
                 border-bottom-left-radius: 300px;
                 border-top-left-radius: 300px;
-                transform: translateX(100%); /* Start uden for skærmen */
+                transform: translateX(100%);
+                /* Start uden for skærmen */
                 transition: transform 0.5s ease-in-out;
+
 
                 li {
                     font-size: 16px;
@@ -106,7 +144,8 @@ header {
                     margin: 0.5em 0;
                 }
 
-                &.open { //Vis menuen, når den er åben/klikket på
+                &.open {
+                    //Vis menuen, når den er åben/klikket på
                     transform: translateX(0);
                     visibility: visible;
                     opacity: 1;
@@ -154,19 +193,13 @@ header {
     header {
         padding: 1em 1em;
 
-
-        .btn__header {
-            display: none;
-        }
-
         .menu-icon {
             font-size: 2em;
-          }
-      
-          ul.menu {
+        }
+
+        ul.menu {
             width: 100%;
             padding: 4em 1em;
-          }
         }
-      }
-    
+    }
+}

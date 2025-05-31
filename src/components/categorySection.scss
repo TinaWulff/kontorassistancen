@@ -10,7 +10,12 @@
         width: 100%;
         aspect-ratio: 1/1.33;
         object-fit: cover;
+        filter: saturate(0.5); // Reducerer farvemætningen til 50%
+        transition: filter 0.3s ease-in-out; // Tilføjer en glidende effekt ved hover
 
+        &:hover {
+            filter: saturate(1); // Gør billedet fuldt mættet ved hover
+        }
     }
 
     div {
@@ -18,21 +23,36 @@
         position: relative;
 
         a {
-
             display: grid;
             align-items: center;
             justify-items: center;
-            color: $light;
-            font-size: 48px;
+            color: $button-dark;
+            font-size: 32px;
             position: relative;
             z-index: 1;
-            transform: scale(1); 
+            transform: scale(1);
+
+            // Tilføj filterfarve med ::before
+            &::before {
+                content: ''; // Pseudo-element til filteret
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(57, 153, 238, 0.6); // Farve med 60% opacitet
+                z-index: 1; // Sørger for, at filteret ligger bag teksten
+                transition: opacity 0.3s ease-in-out; // Transition for hover-effekt
+            }
+
+            &:hover::before {
+                opacity: 0.8; // Gør filteret mere synligt ved hover
+            }
 
             &:hover {
                 transform: scale(1.06);
                 transition: transform 0.5s ease;
                 z-index: 10;
-
 
                 @media (max-width: 899px) {
                     transform: none;
@@ -42,11 +62,11 @@
             }
 
             @media (max-width: 1400px) {
-                font-size: 32px;
+                font-size: 24px;
             }
 
             @media (max-width: 799px) {
-                font-size: 24px;
+                font-size: 18px;
             }
 
 

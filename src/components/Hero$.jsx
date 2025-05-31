@@ -1,5 +1,5 @@
 
-import HeroImg from '../assets/topbillede.jpg';
+import HeroImg from '../assets/img/header-red.png';
 import LinkButton from './LinkButton';
 
 import './hero.scss';
@@ -12,12 +12,11 @@ export default function Hero() {
         <img src={HeroImg} alt="Hero image" />
 
        <div className='hero__text'>
-        <h1>Making it right entirely in Copenhagen since 1997</h1>
-        <p>Every product embodies our spirit of family legacy, traditional craftmanship,
-            and genuine commitment to sustainability.</p>
+        <h1>Overblik og balance i  regnskabet?</h1>
+        <p>Få mere tid til det du er god til i din virksomhed - vi har styr på løn og regnskab.</p>
         
-        <LinkButton className="btn__light btn__hero">
-        Book et møde
+        <LinkButton className="btn__dark btn__hero">
+        Få et tilbud
         </LinkButton>
         </div>
 

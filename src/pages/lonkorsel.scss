@@ -1,0 +1,14 @@
+@use "../Styles/_variables.scss" as *;
+body {
+    height: 100vh;
+}
+
+main {
+background-color: $color;
+
+img {
+    rotate: 90deg;
+}
+
+
+}
