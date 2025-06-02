@@ -21,6 +21,7 @@
         p {
             max-width: 80%;
         }
+
     }
 
     @media (max-width: 1150px) {
@@ -82,7 +83,7 @@
     img {
         grid-column: 1;// 2/3;
         grid-row: 1;
-
+        aspect-ratio: unset;
 
         @media (max-width: 799px) {
             grid-column: 1;
@@ -96,3 +97,4 @@
     }
 
 }
+

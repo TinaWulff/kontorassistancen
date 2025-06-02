@@ -201,5 +201,18 @@ header {
             width: 100%;
             padding: 4em 1em;
         }
+
+        h2 {
+            font-size: 28px;
+        }
     }
+}
+
+
+@media screen and (max-width: 350px) { 
+header {
+    h2 {
+        font-size: 24px;
+    }
+}
 }

@@ -1,14 +1,81 @@
 @use "../Styles/_variables.scss" as *;
-body {
-    height: 100vh;
-}
+
 
 main {
 background-color: $color;
 
-img {
-    rotate: 90deg;
-}
 
+
+.page {
+    padding: 9rem clamp(4rem, 10vw, 9rem);
+    margin: unset;
+    gap: 4em;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 800px) {
+        padding: 6rem clamp(4rem, 8vw, 4rem);
+    }
+
+    @media (max-width: 600px) {
+        padding: 3rem clamp(3rem, 5vw, 4rem);
+    }
+
+    @media (max-width: 450px) {
+        padding: 2rem 1.5rem;
+
+        p {
+        text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+      gap: 0;;
+
+        img {
+            grid-column: 1;
+            grid-row: 1;
+            justify-self: center;
+        }
+
+        p {
+            grid-column: 1;
+            grid-row: 2;    
+        }
+
+        h2 {
+            margin-top: 1em;
+        }
+    }
+
+    img {
+        margin: unset;
+        width: 100%;
+        max-width: 100%;
+        //margin: 2em;
+        object-fit: cover;
+        max-height: 100%;
+        
+        aspect-ratio: 1/1;
+        object-fit: cover;
+
+        @media (max-width: 800px) {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: unset;
+            height: 100%;
+        }
+    }
+  
+    p {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
 
 }

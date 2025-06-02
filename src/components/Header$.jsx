@@ -16,11 +16,11 @@ export default function Header() {
     };
     return (
         <>
-            <h2>Kontorassistancen</h2>
+            <NavLink to="/"><h2>Kontorassistancen</h2></NavLink>
 
             <nav>
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
-                    <li><NavLink to="/{:id}">Lønkørsel</NavLink></li>
+                    <li><NavLink to="/lonkorsel">Lønkørsel</NavLink></li>
                     <li><NavLink to="/{:id}">Momsregnskab</NavLink></li>
                     <li><NavLink to="/{:id}">Online Bogføring</NavLink></li>
                     <li><NavLink to="/{:id}">Kontakt</NavLink></li>
