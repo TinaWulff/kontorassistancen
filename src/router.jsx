@@ -28,11 +28,11 @@ const router = createBrowserRouter([
                 element: <Lonkorsel />
             },
             {
-                path: '/Momsregnskab',
+                path: '/momsregnskab',
                 element: <Momsregnskab />
             },
             {
-                path: '/OnlineBogforing',
+                path: '/Onlinebogforing',
                 element: <OnlineBogforing />
             },
             {

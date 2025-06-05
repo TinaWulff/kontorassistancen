@@ -21,9 +21,9 @@ export default function Header() {
             <nav>
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
                     <li><NavLink to="/lonkorsel">Lønkørsel</NavLink></li>
-                    <li><NavLink to="/{:id}">Momsregnskab</NavLink></li>
-                    <li><NavLink to="/{:id}">Online Bogføring</NavLink></li>
-                    <li><NavLink to="/{:id}">Kontakt</NavLink></li>
+                    <li><NavLink to="/momsregnskab">Momsregnskab</NavLink></li>
+                    <li><NavLink to="/onlinebogforing">Online Bogføring</NavLink></li>
+                    <li><NavLink to="/kontakt">Kontakt</NavLink></li>
                 </ul>
             </nav>
             

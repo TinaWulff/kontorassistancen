@@ -5,10 +5,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4em;
-    margin: 9rem;
+    padding: 9rem;
     align-items: center;
     line-height: 1.5;
     max-width: 100%;
+    background-color: $light;
 
 
     @media screen and (min-width: 1800px) {         //big screens
@@ -25,11 +26,11 @@
     }
 
     @media (max-width: 1150px) {
-        margin: 6rem;
+        padding: 6rem;
     }
 
     @media (max-width: 1000px) {
-        margin: 6rem 4rem;
+        padding: 6rem 4rem;
     }
 
     @media (max-width: 799px) {
@@ -41,7 +42,7 @@
 
     @media (max-width: 699px) {
         //margin: 3rem 2rem;
-        margin: 6rem 1rem;
+        padding: 6rem 1rem;
     }
 
 

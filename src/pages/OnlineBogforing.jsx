@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ImageSection from '../components/ImageSection.jsx';
-import './lonkorsel.scss';
+import './undersider.scss';
 import '../Styles/style.scss';
 
 import OnlineImg from '../assets/img/onlinebogforing.png';
@@ -20,8 +20,8 @@ export default function OnlineBogforing() {
                     "Momsregnskab er vigtigt for at overholde lovgivningen og undgå bøder og sanktioner fra myndighederne. Hvis du ikke har styr på dit momsregnskab, kan det også føre til fejl i regnskabet og dermed give et forkert billede af virksomhedens økonomi. Derudover kan det også føre til tab af kunder og investorer, hvis de ikke har tillid til virksomhedens økonomi.",
                     "Kontorassistancen hjælper dig med at undgå fejl og sikre, at din bogføring er korrekt og opdateret."
                 ]}
-                    linkTo="/onlinebogforing" 
-                    buttonText={"Gå tilbage"}
+                    linkTo="/ydelser" 
+                    buttonText={"Gå til oversigt af ydelser"}
                     className='image__let page'
             ></ImageSection>
         </>

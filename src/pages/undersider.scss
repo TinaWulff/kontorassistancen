@@ -5,12 +5,37 @@ main {
 background-color: $color;
 
 
+.ydelser {
+
+    img {
+    filter: saturate(0.5);
+    }
+
+    ul {
+        margin-left: 1em;
+    }
+
+    li {
+        margin-bottom: 1em;
+        font-size: 18px;
+
+    &:hover {
+        color: $btn-color;
+    }
+
+        svg {
+           margin-bottom: -3px;
+        }
+    }
+
+}
 
 .page {
-    padding: 9rem clamp(4rem, 10vw, 9rem);
+    padding: 6rem clamp(4rem, 10vw, 9rem);
     margin: unset;
     gap: 4em;
     grid-template-columns: repeat(2, 1fr);
+    background-color: $color;
 
     @media (max-width: 800px) {
         padding: 6rem clamp(4rem, 8vw, 4rem);
@@ -30,6 +55,11 @@ background-color: $color;
         h2 {
             text-align: center;
         }
+    }
+
+    .button-link {
+        margin: 0em;
+        background-color: $btn-color;
     }
 
     @media screen and (max-width: 800px) {

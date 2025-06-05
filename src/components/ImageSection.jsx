@@ -4,7 +4,7 @@ import './imageSection.scss';
 
 //Class-names: split__section, image__left, image__right
 
-export default function ImageSection({ className = "", image, h2, textArray = [], linkTo, buttonText }) {
+export default function ImageSection({ className = "", image, h2, textArray = [], linkTo, buttonText, children }) {
 
 
     return (
@@ -17,6 +17,7 @@ export default function ImageSection({ className = "", image, h2, textArray = []
                     textArray.map((paragraph, index) => <p key={index}>{paragraph}</p>)
                 }
             >
+                {children}
             </TextSection>
 
             <LinkButton
