@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import './header.scss';
-import Logo from '../assets/rooster-logo.png';
+import Logo from '../assets/logo.svg';
 import LinkButton from './LinkButton.jsx';
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link } from 'react-router';
@@ -15,8 +15,8 @@ export default function Header() {
         setMenuOpen(!menuOpen);
     };
     return (
-        <>
-            <NavLink to="/"><h2>Kontorassistancen</h2></NavLink>
+        <header>
+            <NavLink to="/"><img src={Logo} alt="logo" /></NavLink>
 
             <nav>
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
@@ -34,6 +34,6 @@ export default function Header() {
             {menuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
 
             </div>
-        </>
+        </header>
     )
 }

@@ -8,9 +8,7 @@ function Layout() {
  
   return (
     <>
-<header>
 <Header />
-</header>
 
 <main>
 <Outlet />

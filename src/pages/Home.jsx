@@ -40,7 +40,7 @@ function Home() {
         </TextSection>
         <LinkButton
          className="btn__color"
-         linkto ="/kontakt"
+         linkto ="#formular"
         >Få tilbud</LinkButton>
         </section>
 
@@ -71,7 +71,7 @@ function Home() {
             "Nu arbejder Vivi fokuseret på fuld tid i kontorassistancen, så hun kan bruge alle ressourcer på at yde sin personlige og individuelle service til sin kunder i Kontorassistancen.",
             "Vivi er specialist i online bogføring, momsregnskab og lønkørsel og samarbejder med flere autoriserede revisorer."
           ]}
-          linkTo ="/kontakt"
+          linkTo ="/ydelser"
             buttonText={"Læs om de forskellige ydelser"}
           className="image__right"
           >

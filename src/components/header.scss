@@ -6,10 +6,23 @@ header {
     padding: 1em 9rem;
 
     display: grid;
-    grid-template-columns: min-content 6fr;
+    grid-template-columns: 340px 6fr;
     align-items: center;
     position: relative;
     background-color: $light;
+
+    a {
+        width: 100%;
+        display: flex;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+        align-self: center;
+       
+    }
+
 
     h2 {
         color: $dark;
