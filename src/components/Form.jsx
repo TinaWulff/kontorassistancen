@@ -1,8 +1,5 @@
 import { useState } from 'react';
-// import { Form } from 'react-router';
 import { z } from 'zod';
-
-
 
 // Valideringsskema med Zod
 const schema = z.object({
@@ -18,8 +15,9 @@ const schema = z.object({
 export default function ContactForm() {
     const [errors, setErrors] = useState({});
     const [successMessage, setSuccessMessage] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
         const data = Object.fromEntries(formData.entries());
@@ -29,17 +27,47 @@ export default function ContactForm() {
         if (!result.success) {
             setErrors(result.error.flatten().fieldErrors);
             setSuccessMessage(false);
-        } else {
-            setErrors({});
-            setSuccessMessage(true);
-            console.log('Valid data:', result.data);
+            return;
+        }
 
+        // Send til Netlify Forms
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
+
+            if (response.ok) {
+                setErrors({});
+                setSuccessMessage(true);
+                event.target.reset(); // Nulstil form
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setErrors({ submit: ['Der opstod en fejl. Prøv igen.'] });
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
     return (
         <div>
-            <form className="form" method="post" onSubmit={handleSubmit}>
+            <form 
+                className="form" 
+                method="post" 
+                onSubmit={handleSubmit}
+                name="contact"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+            >
+                {/* Hidden fields for Netlify */}
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+
                 {/* Fulde navn */}
                 <input
                     type="text"
@@ -76,18 +104,19 @@ export default function ContactForm() {
                 {errors.message && <p style={{ color: 'red' }}>{errors.message[0]}</p>}
 
                 {/* Send-knap */}
-                <button type="submit" name="send" id="send">
-                    Send besked
+                <button type="submit" name="send" id="send" disabled={isSubmitting}>
+                    {isSubmitting ? 'Sender...' : 'Send besked'}
                 </button>
+
+                {errors.submit && <p style={{ color: 'red' }}>{errors.submit[0]}</p>}
             </form>
+
             {/* Succesbesked */}
             {successMessage && (
-                <p style={{ color: 'black', marginTop: '1em', fontSize: '14px' }}>
+                <p style={{ color: 'green', marginTop: '1em', fontSize: '14px' }}>
                     Tak for din besked! Vi vender tilbage hurtigst muligt.
                 </p>
             )}
         </div>
-
-
     );
 }
