@@ -11,7 +11,7 @@ export default function OnlineBogforing() {
     return (
         <>
             <ImageSection
-                image="/img/onlinebogforing.jpg"
+                image="/img/onlinebogforing.png"
                 h2="Online Bogføring"
                 textArray={[
                    "Online bogføring er en digitaliseret version af den traditionelle bogføring, hvor alle økonomiske transaktioner registreres og opbevares i skyen. Online bogføring muliggør et løbende overblik over din økonomiske situation, og du har adgang til dit opdaterede firmaregnskab på alle tidspunkter på dagen, blot du er tilkoblet en internetforbindelse.",

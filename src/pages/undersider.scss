@@ -3,7 +3,7 @@
 
 main {
 background-color: $color;
-
+//height: 70%;
 
 .ydelser {
 
@@ -31,7 +31,7 @@ background-color: $color;
 }
 
 .page {
-    padding: 6rem clamp(4rem, 10vw, 9rem);
+    padding: 7% clamp(12rem, 15vw, 25rem);
     margin: unset;
     gap: 4em;
     grid-template-columns: repeat(2, 1fr);

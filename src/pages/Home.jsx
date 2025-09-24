@@ -27,7 +27,7 @@ function Home() {
         </TextSection>
         <LinkButton
          className="btn__color"
-         linkto ="#formular"
+         linkto ="/kontakt"
         >Få tilbud</LinkButton>
         </section>
 

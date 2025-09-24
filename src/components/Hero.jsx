@@ -14,7 +14,7 @@ export default function Hero() {
         <h1>Overblik og balance i  regnskabet?</h1>
         <p>Få mere tid til det du er god til i din virksomhed - vi har styr på løn og regnskab.</p>
         
-        <LinkButton className="btn__dark btn__hero" linkto="#formular">
+        <LinkButton className="btn__dark btn__hero" linkto="/kontakt">
         Få et tilbud
         </LinkButton>
         </div>

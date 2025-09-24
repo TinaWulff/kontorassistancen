@@ -5,10 +5,11 @@
     background-color: $color;
     width: 100%;
     max-width: 100%;
+    height: 80vh;
     display: flex;
     gap: 4em;
     justify-content: center;
-    padding: 9rem clamp(4rem, 10vw, 8rem); //sidste før 9
+    padding: 13rem clamp(4rem, 10vw, 8rem); //sidste før 9
 
     @media screen and (min-width: 1800px) {
         padding: 9rem clamp(12rem, 15vw, 25rem);
