@@ -1,8 +1,10 @@
+import FormSection from "../components/FormSection";
 
-export default function contact() {
+export default function Contact() {
 
     return (
         <>
+        <FormSection />
         </>
     )
 }

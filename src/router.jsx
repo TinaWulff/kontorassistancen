@@ -36,7 +36,7 @@ const router = createBrowserRouter([
                 element: <OnlineBogforing />
             },
             {
-                path: 'contact',
+                path: '/contact',
                 element: <Contact />
             },
             {
