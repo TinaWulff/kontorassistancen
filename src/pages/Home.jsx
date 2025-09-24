@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 
 import '../Styles/style.scss';
 import '../components/imageSection.scss';
@@ -16,7 +16,7 @@ import FormSection from '../components/FormSection';
 //Images:
 import YdelserImg from '../assets/img/regnskab_image.png';
 import ProfilBillede from '../assets/img/profilbillede.png';
-import { Link } from 'react-router';
+//import { Link } from 'react-router';
 import LinkButton from '../components/LinkButton.jsx';
 
 
