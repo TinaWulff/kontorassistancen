@@ -3,14 +3,13 @@ import ImageSection from '../components/ImageSection.jsx';
 import './undersider.scss';
 import '../Styles/style.scss';
 
-import LønImg from '../assets/img/lonkorsel.jpg';
 
 export default function Lonkorsel() {
 
     return (
         <>
             <ImageSection
-                image={LønImg}
+                image="/img/lonkorsel.jpg"
                 h2="Lønkørsel"
                 textArray={[
                     "Lønkørsel er en proces, hvor en virksomhed udbetaler løn til sine ansatte. Dette kan være en kompleks proces, der involverer mange forskellige faktorer, herunder skat, pension, feriepenge og andre ydelser.",

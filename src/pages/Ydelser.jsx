@@ -6,14 +6,12 @@ import './undersider.scss';
 import '../Styles/style.scss';
 import { FaChevronRight } from "react-icons/fa6";
 
-import YdelserImg from '../assets/img/ydelser.jpg';
-
 export default function Ydelser() {
 
     return (
         <>
             <ImageSection
-                image={YdelserImg}
+                image="/img/ydelser.jpg"
                 h2="Ydelser"
                 textArray={[
                     "Kontorassistancen tilbyder en bred vifte af tjenester, som overordnet er listet herunder.",
@@ -21,8 +19,8 @@ export default function Ydelser() {
                     "Når du vælger at få udført en ydelse hos os, sørger vi for at leve op til alle lovkrav og alt er selvfølgelig afstemt og klar til at sende til revisoren ved årsafslutningen."
                 ]}
                     linkTo="/" 
-                    buttonText={"Tilbage til forside"}
-                    className='image__let page ydelser'
+                    buttonText="Tilbage til forside"
+                    className="image__left page ydelser"
             >
                 <ul>
                 <li><Link to="/lonkorsel">Lønkørsel <FaChevronRight /></Link></li>

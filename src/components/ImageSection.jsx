@@ -22,7 +22,7 @@ export default function ImageSection({ className = "", image, h2, textArray = []
 
             <LinkButton
             className="btn__dark"
-            linkto ={linkTo}>
+            linkto={linkTo}>
                 {buttonText}</LinkButton>
         </section>
     )

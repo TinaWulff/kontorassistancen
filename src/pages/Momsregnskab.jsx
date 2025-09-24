@@ -1,17 +1,15 @@
-
 import React from 'react';
 import ImageSection from '../components/ImageSection.jsx';
 import './undersider.scss';
 import '../Styles/style.scss';
 
-import MomsImg from '../assets/img/moms.jpg';
 
 export default function Momsregnskab() {
 
     return (
         <>
             <ImageSection
-                image={MomsImg}
+                image="/img/moms.jpg"
                 h2="Momsregnskab"
                 textArray={[
                     "Momsregnskab er en opgørelse over virksomhedens købsmoms og salgsmoms i en given periode. I Danmark er momsregnskab en del af bogføringen, og det er et krav, at alle momsregistrerede virksomheder skal føre et regnskab over køb og salg af varer og ydelser. Momsregnskabet skal indsendes til Skattestyrelsen inden for de fastsatte frister.",
@@ -21,8 +19,8 @@ export default function Momsregnskab() {
                 ]}
                     linkTo="/ydelser" 
                     buttonText={"Gå til oversigt af ydelser"}
-                    className='image__let page'
-            ></ImageSection>
+                    className='image__left page'
+            />
         </>
             
     );

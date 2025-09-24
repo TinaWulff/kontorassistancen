@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
 import './header.scss';
-import Logo from '../assets/logo.svg';
-import LinkButton from './LinkButton.jsx';
+//import LinkButton from './LinkButton.jsx';
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link } from 'react-router';
 import { NavLink } from 'react-router';
@@ -16,7 +15,7 @@ export default function Header() {
     };
     return (
         <header>
-            <NavLink to="/"><img src={Logo} alt="logo" /></NavLink>
+            <NavLink to="/"><img src="/logo.svg" alt="logo" /></NavLink>
 
             <nav>
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
