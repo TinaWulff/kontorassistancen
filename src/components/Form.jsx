@@ -1,3 +1,5 @@
+//Formen er skrevet med kode til opsætning af Netlify Forms, så mailen kommer direkte til kontorassistancen, desuden honeypot spamfilter.
+
 import { useState } from 'react';
 import { z } from 'zod';
 
