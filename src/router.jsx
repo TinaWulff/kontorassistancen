@@ -24,7 +24,7 @@ const router = createBrowserRouter([
                 element: <Ydelser />
             },
             {
-                path: '/Lonkorsel',
+                path: '/lonkorsel',
                 element: <Lonkorsel />
             },
             {
@@ -32,15 +32,15 @@ const router = createBrowserRouter([
                 element: <Momsregnskab />
             },
             {
-                path: '/Onlinebogforing',
+                path: '/onlinebogforing',
                 element: <OnlineBogforing />
             },
             {
-                path: '/contact',
+                path: '/kontakt',
                 element: <Contact />
             },
             {
-                path: 'tak',
+                path: '/tak',
                 element: <Tak />
             },
             {
