@@ -19,48 +19,89 @@ export default function ContactForm() {
     const [successMessage, setSuccessMessage] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+    //     const formData = new FormData(event.currentTarget);
+    //     const data = Object.fromEntries(formData.entries());
+
+    //     const result = schema.safeParse(data);
+
+    //     if (!result.success) {
+    //         setErrors(result.error.flatten().fieldErrors);
+    //         setSuccessMessage(false);
+    //         return;
+    //     }
+
+    //     // Send til Netlify Forms
+    //     setIsSubmitting(true);
+    //     try {
+    //         const response = await fetch('/', {
+    //             method: 'POST',
+    //             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //             body: new URLSearchParams(formData).toString()
+    //         });
+
+    //         if (response.ok) {
+    //             setErrors({});
+    //             setSuccessMessage(true);
+    //             event.target.reset(); // Nulstil form
+    //         } else {
+    //             throw new Error('Form submission failed');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //         setErrors({ submit: ['Der opstod en fejl. Prøv igen.'] });
+    //     } finally {
+    //         setIsSubmitting(false);
+    //     }
+    // };
+
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const data = Object.fromEntries(formData.entries());
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-        const result = schema.safeParse(data);
+    // Tilføj form-name manuelt
+    formData.append("form-name", form.getAttribute("name"));
 
-        if (!result.success) {
-            setErrors(result.error.flatten().fieldErrors);
-            setSuccessMessage(false);
-            return;
+    const data = Object.fromEntries(formData.entries());
+    const result = schema.safeParse(data);
+
+    if (!result.success) {
+        setErrors(result.error.flatten().fieldErrors);
+        setSuccessMessage(false);
+        return;
+    }
+
+    setIsSubmitting(true);
+    try {
+        const response = await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        });
+
+        if (response.ok) {
+            setErrors({});
+            setSuccessMessage(true);
+            form.reset();
+        } else {
+            throw new Error("Form submission failed");
         }
+    } catch (error) {
+        console.error("Error:", error);
+        setErrors({ submit: ["Der opstod en fejl. Prøv igen."] });
+    } finally {
+        setIsSubmitting(false);
+    }
+};
 
-        // Send til Netlify Forms
-        setIsSubmitting(true);
-        try {
-            const response = await fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
-            });
-
-            if (response.ok) {
-                setErrors({});
-                setSuccessMessage(true);
-                event.target.reset(); // Nulstil form
-            } else {
-                throw new Error('Form submission failed');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            setErrors({ submit: ['Der opstod en fejl. Prøv igen.'] });
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
 
     return (
         <div>
-            <form 
-                className="form" 
-                method="post" 
+            <form
+                className="form"
+                method="post"
                 onSubmit={handleSubmit}
                 name="contact"
                 data-netlify="true"
@@ -68,7 +109,9 @@ export default function ContactForm() {
             >
                 {/* Hidden fields for Netlify */}
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
+                <p style={{ display: 'none' }}>
+                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                </p>
 
                 {/* Fulde navn */}
                 <input
