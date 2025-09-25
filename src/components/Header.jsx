@@ -19,6 +19,7 @@ export default function Header() {
 
             <nav>
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
+                    <li><NavLink to="/" onClick={() => setMenuOpen(false)}>Forside</NavLink></li>
                     <li><NavLink to="/lonkorsel" onClick={() => setMenuOpen(false)}>Lønkørsel</NavLink></li>
                     <li><NavLink to="/momsregnskab" onClick={() => setMenuOpen(false)}>Momsregnskab</NavLink></li>
                     <li><NavLink to="/onlinebogforing" onClick={() => setMenuOpen(false)}>Online Bogføring</NavLink></li>

@@ -13,11 +13,22 @@ header {
     a {
         width: 100%;
         display: flex;
+        max-width: 100%;
+        align-items: center;
+          @media (max-width: 1100px) {
+      max-width: 250px;
     }
+           @media (max-width: 800px) {
+      max-width: 220px;
+      margin-top: 5px;
+    }
+    }
+
     img {
         width: 100%;
         height: auto;
         align-self: center;
+
     }
 
     h2 {
@@ -28,10 +39,19 @@ header {
     @media screen and (min-width: 1800px) {
         padding: 1rem clamp(12rem, 15vw, 25rem);
     }
-    @media (max-width: 1100px) {
+
+       @media (max-width: 1250px) {
         padding: 1rem 5rem;
     }
-
+    @media (max-width: 1100px) {
+        padding: 1rem 4.5rem;
+    }
+    @media (max-width: 800px) {
+        padding: 1rem 2.5rem;
+    }
+   @media (max-width: 400px) {
+        padding: 1rem 1.5rem;
+    }
     .menu-icon {
         display: none;
         grid-column: 3;
@@ -50,10 +70,16 @@ header {
             font-size: 2.5em;
             z-index: 1200;
             position: fixed;
-            top: 2em;
-            right: 2em;
+            top: 15px;
+            right: 1em;
             background: none;
             border: none;
+        }
+        @media (max-width: 800px) {
+            margin-top: 0;
+        }
+          @media (max-width: 400px) {
+            right: 0.5em;
         }
     }
 
@@ -175,7 +201,7 @@ header {
 /* Små skærme */
 @media screen and (max-width: 420px) {
     header {
-        grid-template-columns: unset;
+        grid-template-columns: unset;;
     }
 }
 @media screen and (max-width: 350px) {
