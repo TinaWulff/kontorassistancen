@@ -202,6 +202,8 @@ header {
     }
 }
 
+
+
 @media screen and (max-width: 599px) {
     header {
         padding: 1em 1em;
@@ -221,6 +223,13 @@ header {
     }
 }
 
+@media screen and (max-width: 420px) { 
+
+    header {
+        grid-template-columns: unset;
+    }
+
+}
 
 @media screen and (max-width: 350px) { 
 header {

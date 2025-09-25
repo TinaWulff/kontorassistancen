@@ -55,6 +55,7 @@
       align-items: center;
       height: 3em;
       padding: 0.5em 1em;
+      grid-column: unset;
     }
 
     .btn__hero{
@@ -64,3 +65,19 @@
       align-self: center;
   }
   }
+
+   @media (max-width: 350px) {
+
+    *:hover {
+        *transform: none !important;
+        box-shadow: none !important;
+        scale: 1 !important;  
+    }
+
+    .button-link, button {
+      padding: 1.5em 1em;
+      font-size: 16px;
+      height: 2.5em;
+    }
+
+   }

@@ -86,3 +86,38 @@ h1, h2, h3 {
 } */
 
 
+@media (max-width: 600px) {
+
+*:hover {
+    *transform: none !important;
+    box-shadow: none !important;
+    scale: 1 !important;
+}
+
+}
+
+@media (max-width: 350px) {
+  .split__section, .page, .form__section, header, footer {
+    padding: 1em !important;
+    gap: 0.5em !important;
+    font-size: 14px !important;
+  }
+
+
+
+  h1{
+    font-size: 36px !important;
+  }
+  
+  h2{
+    font-size: 32px !important;
+  }
+  
+  h3 {
+    font-size: 24px !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
