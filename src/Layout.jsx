@@ -1,14 +1,20 @@
 
+import ScrollToTop from "./components/Scrolltotop$.jsx";
 import { Outlet } from 'react-router';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import './Styles/style.scss';
 
+
 function Layout() {
  
+
+
   return (
     <>
 <Header />
+
+ <ScrollToTop />
 
 <main>
 <Outlet />
@@ -23,3 +29,5 @@ function Layout() {
 }
 
 export default Layout
+
+
