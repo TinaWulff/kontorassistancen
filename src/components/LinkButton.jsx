@@ -1,6 +1,6 @@
 
 import './linkButton.scss';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export default function LinkButton( {children, className ="", linkto} ) {
 

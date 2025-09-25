@@ -4,7 +4,7 @@ import './header.scss';
 //import LinkButton from './LinkButton.jsx';
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link } from 'react-router';
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 
 export default function Header() {
