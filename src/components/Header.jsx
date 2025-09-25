@@ -19,20 +19,23 @@ export default function Header() {
 
             <nav>
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
-                    <li><NavLink to="/lonkorsel">Lønkørsel</NavLink></li>
-                    <li><NavLink to="/momsregnskab">Momsregnskab</NavLink></li>
-                    <li><NavLink to="/onlinebogforing">Online Bogføring</NavLink></li>
-                    <li><NavLink to="/kontakt">Kontakt</NavLink></li>
+                    <li><NavLink to="/lonkorsel" onClick={() => setMenuOpen(false)}>Lønkørsel</NavLink></li>
+                    <li><NavLink to="/momsregnskab" onClick={() => setMenuOpen(false)}>Momsregnskab</NavLink></li>
+                    <li><NavLink to="/onlinebogforing" onClick={() => setMenuOpen(false)}>Online Bogføring</NavLink></li>
+                    <li><NavLink to="/kontakt" onClick={() => setMenuOpen(false)}>Kontakt</NavLink></li>
                 </ul>
+                {menuOpen && <div className="menu-overlay" onClick={() => setMenuOpen(false)} />}
             </nav>
-            
+
             <div
-            className={`menu-icon ${menuOpen ? 'open' : ''}`}
-            onClick={toggleMenu}
+                className={`menu-icon ${menuOpen ? 'open' : ''}`}
+                onClick={toggleMenu}
             >
-            {menuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+                {menuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
 
             </div>
         </header>
     )
 }
+
+
