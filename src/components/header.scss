@@ -265,6 +265,8 @@ nav ul.menu > li > a {
       width: 0 !important;
       background: none !important;
     }
+
+    transition: none !important ;
   }
     nav ul.menu > li > a::after {
     display: none !important;
