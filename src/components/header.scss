@@ -1,5 +1,6 @@
 @use "../Styles/_variables.scss" as *;
 
+
 header {
     width: 100%;
     max-width: 100%;
@@ -99,7 +100,7 @@ header {
             display: grid;
             grid-template-columns: repeat(5, auto);
             justify-items: center;
-            column-gap: 3.5em;
+            // column-gap: 3.5em;
             margin: 0;
             @media (max-width: 1000px) {
                 display: flex;
@@ -116,8 +117,8 @@ header {
                 padding: 8em 2em 2em 2em;
                 gap: 2em;
                 margin: 0;
-                border-bottom-left-radius: 300px;
-                border-top-left-radius: 300px;
+                border-bottom-left-radius: 30px;
+                // border-top-left-radius: 300px;
                 box-shadow: 0 0 20px rgba(30,30,30,0.2);
                 // Slide-in
                 transform: translateX(100%);
@@ -183,6 +184,7 @@ header {
 }
 
 /* Overlay, kun på mobil - placeres efter menu i DOM */
+
 @media (max-width: 1000px) {
     .menu-overlay {
         display: none;
@@ -199,6 +201,7 @@ header {
 }
 
 /* Små skærme */
+
 @media screen and (max-width: 420px) {
     header {
         grid-template-columns: unset;;
@@ -247,7 +250,9 @@ nav ul.menu > li > a {
   }
 }
 
+
 // Mobil: fjern hover-effekter
+
 @media (max-width: 1000px) {
   nav ul.menu > li > a {
     &:hover,
@@ -260,4 +265,9 @@ nav ul.menu > li > a {
       background: none !important;
     }
   }
+    nav ul.menu > li > a::after {
+    display: none !important;
+    width: 0 !important;
+  }
 }
+ 
