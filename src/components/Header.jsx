@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './header.scss';
 //import LinkButton from './LinkButton.jsx';
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 

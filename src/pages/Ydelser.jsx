@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import ImageSection from '../components/ImageSection.jsx';
 import './undersider.scss';
 import '../Styles/style.scss';
