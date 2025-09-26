@@ -1,5 +1,5 @@
 
-import ScrollToTop from "./components/Scrolltotop$.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import { Outlet } from 'react-router';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
