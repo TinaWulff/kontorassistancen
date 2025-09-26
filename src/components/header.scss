@@ -97,7 +97,7 @@ header {
             justify-self: end;
             grid-column: 1;
             display: grid;
-            grid-template-columns: repeat(4, auto);
+            grid-template-columns: repeat(5, auto);
             justify-items: center;
             column-gap: 3.5em;
             margin: 0;
@@ -211,4 +211,53 @@ header {
         }
         padding: 1em !important;
     }
+}
+
+//HOVER EFFEKTER I MENU:
+// Desktop (default)
+nav ul.menu > li > a {
+  position: relative;
+  padding-bottom: 2px;
+  color: $dark;
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $btn-color;
+  }
+
+  &.active {
+    color: $btn-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: $btn-color;
+    transition: width 0.3s;
+  }
+
+  &:hover::after,
+  &.active::after {
+    width: 100%;
+  }
+}
+
+// Mobil: fjern hover-effekter
+@media (max-width: 1000px) {
+  nav ul.menu > li > a {
+    &:hover,
+    &:focus,
+    &.active {
+      color: inherit;
+    }
+    &::after {
+      width: 0 !important;
+      background: none !important;
+    }
+  }
 }
