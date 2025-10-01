@@ -6,21 +6,22 @@
     max-width: 100%;
     //min-height: 600px; // Minimum højde for hero sektionen
     //object-fit: cover;//
+    background-color:  rgba(241, 220, 191, 0.8);
 
     display: grid;
     grid-template-columns: 2fr 1fr; //før 1fr 1fr;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(241, 220, 191, 0.8); // Farve med 80% opacitet
-        z-index: 1; // Sørg for, at overlayet ligger over billedet
-        pointer-events: none; // Gør overlayet ikke-interaktivt
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     //background-color: rgba(241, 220, 191, 0.8); // Farve med 80% opacitet
+    //     z-index: 1; // Sørg for, at overlayet ligger over billedet
+    //     pointer-events: none; // Gør overlayet ikke-interaktivt
+    // }
 
 
     img {
@@ -29,6 +30,7 @@
         max-width: 100%;
         object-fit: cover;
         transform: scaleX(-1);
+        filter: opacity(0.2);
     }
 
     .hero__text {
