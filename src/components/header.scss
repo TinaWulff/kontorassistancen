@@ -2,34 +2,25 @@
 
 
 header {
-    width: 100%;
-    max-width: 100%;
     padding: 1em 9rem;
-    display: grid;
-    grid-template-columns: 340px 6fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     background-color: $light;
 
-    a {
-        width: 100%;
-        display: flex;
-        max-width: 100%;
-        align-items: center;
-          @media (max-width: 1100px) {
-      max-width: 250px;
-    }
-           @media (max-width: 800px) {
-      max-width: 220px;
-      margin-top: 5px;
-    }
-    }
-
+    
     img {
-        width: 100%;
+        width: 340px;
         height: auto;
-        align-self: center;
 
+        @media (max-width: 1100px) {
+            max-width: 250px;
+        }
+         @media (max-width: 800px) {
+            max-width: 220px;
+            margin-top: 5px;
+        }
     }
 
     h2 {
@@ -55,15 +46,9 @@ header {
     }
     .menu-icon {
         display: none;
-        grid-column: 3;
-        grid-row: 1;
-        justify-self: end;
-        margin-top: 0.25em;
-        z-index: 111;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         &.open {
             transform: rotate(90deg);
-            opacity: 0.8;
             transform-origin: center;
         }
         @media (max-width: 1000px) {
@@ -71,11 +56,7 @@ header {
             cursor: pointer;
             font-size: 2.5em;
             z-index: 1200;
-            position: fixed;
-            top: 15px;
-            right: 1em;
-            background: none;
-            border: none;
+            
         }
         @media (max-width: 800px) {
             margin-top: 0;
@@ -86,22 +67,14 @@ header {
     }
 
     nav {
-        display: grid;
-        grid-template-columns: 5fr;
-        align-items: center;
-        justify-items: center;
-        column-gap: 3em;
-        @media (max-width:1200px) {
-            margin-left: 1.5em;
-        }
+        
+        
 
         ul.menu {
-            justify-self: end;
-            grid-column: 1;
-            display: grid;
-            grid-template-columns: repeat(5, auto);
-            justify-items: center;
-            column-gap: 3.5em;
+            
+            display: flex;
+            align-items: center;
+            gap: 3.5em;
             margin: 0;
             @media (max-width: 1000px) {
                 display: flex;
@@ -178,10 +151,7 @@ header {
         justify-self: end;
         margin-right: 5em;
     }
-    .menu-icon {
-        grid-column: 2;
-        justify-self: end;
-    }
+
 }
 
 /* Overlay, kun på mobil - placeres efter menu i DOM */
@@ -194,7 +164,7 @@ header {
         display: block;
         position: fixed;
         top: 0; left: 0;
-        //width: 100vw;
+        width: 100vw;
         height: 100vh;
         background: rgba(0,0,0,0.2);
         z-index: 900;
@@ -204,16 +174,9 @@ header {
 
 /* Små skærme */
 
-@media screen and (max-width: 420px) {
-    header {
-        grid-template-columns: unset;;
-    }
-}
+
 @media screen and (max-width: 350px) {
     header {
-        h2 {
-            font-size: 24px;
-        }
         padding: 1em !important;
     }
 }
