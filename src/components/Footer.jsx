@@ -16,8 +16,7 @@ export default function Footer() {
         <>
         <ul>
         <li>
-       
-            <IoIosMail className="icon"/> <a href="mailto:info@kontorassistancen.dk">info@kontorassistancen.dk</a>
+            <IoIosMail className="icon"/> <a href="mailto:vivi@kontorassistancen.dk">vivi@kontorassistancen.dk</a>
         </li>
         <li><MdPlace className="icon"/>Vads Dal 19, 6973 Ørnhøj</li>
         <li><FaPhone className="icon"/>+45 60 15 77 12</li>
