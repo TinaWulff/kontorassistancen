@@ -26,6 +26,8 @@ export default function OnlineBogforing() {
               <meta property="og:description" content="Online bogføring med Kontorassistancen giver dig løbende overblik over din økonomi, sikkert og fejlfrit i skyen." />
               <meta property="og:url" content={canonical} />
               <meta property="og:image" content="https://kontorassistancen.dk/img/onlinebogforing.png" />
+              <meta property="og:image:width" content="456" />
+              <meta property="og:image:height" content="385" />
 
               <meta name="twitter:card" content="summary_large_image" />
               <meta name="twitter:title" content="Online Bogføring — Kontorassistancen" />

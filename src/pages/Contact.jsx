@@ -19,12 +19,14 @@ export default function Contact() {
           <meta property="og:title" content="Kontakt — Kontorassistancen" />
           <meta property="og:description" content="Kontakt Kontorassistancen for tilbud på bogføring, momsregnskab og lønsupport. Vi svarer hurtigt og personligt." />
           <meta property="og:url" content={canonical} />
-          <meta property="og:image" content="https://kontorassistancen.dk/img/header-red.png" />
+          <meta property="og:image" content="https://kontorassistancen.dk/img/ydelser.jpg" />
+          <meta property="og:image:width" content="1280" />
+          <meta property="og:image:height" content="853" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Kontakt — Kontorassistancen" />
           <meta name="twitter:description" content="Kontakt Kontorassistancen for tilbud på bogføring, momsregnskab og lønsupport. Vi svarer hurtigt og personligt." />
-          <meta name="twitter:image" content="https://kontorassistancen.dk/img/header-red.png" />
+          <meta name="twitter:image" content="https://kontorassistancen.dk/img/ydelser.jpg" />
         </Helmet>
         <FormSection />
         </>
