@@ -2,12 +2,21 @@ import React from 'react';
 import ImageSection from '../components/ImageSection.jsx';
 import './undersider.scss';
 import '../Styles/style.scss';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 
 export default function Lonkorsel() {
+    const location = useLocation();
+    const canonical = `https://kontorassistancen.dk${location.pathname}`;
 
     return (
         <>
+            <Helmet>
+              <title>Lønkørsel — Kontorassistancen</title>
+              <meta name="description" content="Professionel lønkørsel og lønadministration hos Kontorassistancen. Vi sikrer korrekt løn, skat og pension til tiden." />
+              <link rel="canonical" href={canonical} />
+            </Helmet>
             <ImageSection
                 image="/img/lonkorsel.jpg"
                 h2="Lønkørsel"

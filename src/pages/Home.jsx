@@ -10,11 +10,21 @@ import CategorySection from '../components/CategorySection';
 import FormSection from '../components/FormSection';
 
 import LinkButton from '../components/LinkButton.jsx';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 function Home() {
+  const location = useLocation();
+  const canonical = `https://kontorassistancen.dk${location.pathname}`;
 
   return (
     <>
+      <Helmet>
+        <title>Kontorassistancen — Bogføring, moms og løn</title>
+        <meta name="description" content="Kontorassistancen tilbyder professionel bogføring, momsregnskab og lønkørsel med personlig service siden 1992." />
+        <link rel="canonical" href={canonical} />
+      </Helmet>
+
         <Hero></Hero>
 
         <section className="section__color">
@@ -52,7 +62,7 @@ function Home() {
           image="/img/profilbillede.png"
           h2 ="Om Kontorassistancen"
           textArray= {[
-            "Kontorassistancen er ejet af Vivi Becker og har eksisteret siden 1992, inden da arbejede Vivi som løn- og debitor bogholder i en større industrivirksomhed.",
+            "Kontorassistancen er ejet af Vivi Becker og har eksisteret siden 1992, inden da arbejdede Vivi som løn- og debitor bogholder i en større industrivirksomhed.",
             "Igennem årene har hun opbygget en bred vifte af kunder. Vivi har yderligere erfaring og kompetencer fra arbejde i anerkendte revisionsfirmaer i 8 år, alt imens hun har kørt Kontorassistancen.",
             "Nu arbejder Vivi fokuseret på fuld tid i kontorassistancen, så hun kan bruge alle ressourcer på at yde sin personlige og individuelle service til sin kunder i Kontorassistancen.",
             "Vivi er specialist i online bogføring, momsregnskab og lønkørsel og samarbejder med flere autoriserede revisorer."

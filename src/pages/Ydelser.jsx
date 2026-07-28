@@ -1,15 +1,23 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ImageSection from '../components/ImageSection.jsx';
 import './undersider.scss';
 import '../Styles/style.scss';
 import { FaChevronRight } from "react-icons/fa6";
+import { Helmet } from 'react-helmet-async';
 
 export default function Ydelser() {
+    const location = useLocation();
+    const canonical = `https://kontorassistancen.dk${location.pathname}`;
 
     return (
         <>
+        <Helmet>
+          <title>Ydelser — Kontorassistancen</title>
+          <meta name="description" content="Oversigt over ydelser fra Kontorassistancen: online bogføring, momsregnskab og lønkørsel. Se detaljer og priser." />
+          <link rel="canonical" href={canonical} />
+        </Helmet>
             <ImageSection
                 image="/img/ydelser.jpg"
                 h2="Ydelser"

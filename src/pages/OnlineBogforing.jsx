@@ -4,12 +4,21 @@ import React from 'react';
 import ImageSection from '../components/ImageSection.jsx';
 import './undersider.scss';
 import '../Styles/style.scss';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 
 export default function OnlineBogforing() {
+    const location = useLocation();
+    const canonical = `https://kontorassistancen.dk${location.pathname}`;
 
     return (
         <>
+            <Helmet>
+              <title>Online Bogføring — Kontorassistancen</title>
+              <meta name="description" content="Online bogføring med Kontorassistancen giver dig løbende overblik over din økonomi, sikkert og fejlfrit i skyen." />
+              <link rel="canonical" href={canonical} />
+            </Helmet>
             <ImageSection
                 image="/img/onlinebogforing.png"
                 h2="Online Bogføring"

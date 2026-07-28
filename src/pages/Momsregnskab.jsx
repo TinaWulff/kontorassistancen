@@ -2,12 +2,21 @@ import React from 'react';
 import ImageSection from '../components/ImageSection.jsx';
 import './undersider.scss';
 import '../Styles/style.scss';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 
 export default function Momsregnskab() {
+    const location = useLocation();
+    const canonical = `https://kontorassistancen.dk${location.pathname}`;
 
     return (
         <>
+            <Helmet>
+              <title>Momsregnskab — Kontorassistancen</title>
+              <meta name="description" content="Få styr på dit momsregnskab med hjælp fra Kontorassistancen. Korrekt opgørelse af købs- og salgsmoms, klar til Skattestyrelsen." />
+              <link rel="canonical" href={canonical} />
+            </Helmet>
             <ImageSection
                 image="/img/moms.jpg"
                 h2="Momsregnskab"
