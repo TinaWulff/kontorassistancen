@@ -16,6 +16,19 @@ export default function Momsregnskab() {
               <title>Momsregnskab — Kontorassistancen</title>
               <meta name="description" content="Få styr på dit momsregnskab med hjælp fra Kontorassistancen. Korrekt opgørelse af købs- og salgsmoms, klar til Skattestyrelsen." />
               <link rel="canonical" href={canonical} />
+
+              <meta property="og:type" content="website" />
+              <meta property="og:locale" content="da_DK" />
+              <meta property="og:site_name" content="Kontorassistancen" />
+              <meta property="og:title" content="Momsregnskab — Kontorassistancen" />
+              <meta property="og:description" content="Få styr på dit momsregnskab med hjælp fra Kontorassistancen. Korrekt opgørelse af købs- og salgsmoms, klar til Skattestyrelsen." />
+              <meta property="og:url" content={canonical} />
+              <meta property="og:image" content="https://kontorassistancen.dk/img/moms.jpg" />
+
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:title" content="Momsregnskab — Kontorassistancen" />
+              <meta name="twitter:description" content="Få styr på dit momsregnskab med hjælp fra Kontorassistancen. Korrekt opgørelse af købs- og salgsmoms, klar til Skattestyrelsen." />
+              <meta name="twitter:image" content="https://kontorassistancen.dk/img/moms.jpg" />
             </Helmet>
             <ImageSection
                 image="/img/moms.jpg"

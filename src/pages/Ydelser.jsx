@@ -17,6 +17,19 @@ export default function Ydelser() {
           <title>Ydelser — Kontorassistancen</title>
           <meta name="description" content="Oversigt over ydelser fra Kontorassistancen: online bogføring, momsregnskab og lønkørsel. Se detaljer og priser." />
           <link rel="canonical" href={canonical} />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:locale" content="da_DK" />
+          <meta property="og:site_name" content="Kontorassistancen" />
+          <meta property="og:title" content="Ydelser — Kontorassistancen" />
+          <meta property="og:description" content="Oversigt over ydelser fra Kontorassistancen: online bogføring, momsregnskab og lønkørsel. Se detaljer og priser." />
+          <meta property="og:url" content={canonical} />
+          <meta property="og:image" content="https://kontorassistancen.dk/img/ydelser.jpg" />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Ydelser — Kontorassistancen" />
+          <meta name="twitter:description" content="Oversigt over ydelser fra Kontorassistancen: online bogføring, momsregnskab og lønkørsel. Se detaljer og priser." />
+          <meta name="twitter:image" content="https://kontorassistancen.dk/img/ydelser.jpg" />
         </Helmet>
             <ImageSection
                 image="/img/ydelser.jpg"

@@ -23,6 +23,19 @@ function Home() {
         <title>Kontorassistancen — Bogføring, moms og løn</title>
         <meta name="description" content="Kontorassistancen tilbyder professionel bogføring, momsregnskab og lønkørsel med personlig service siden 1992." />
         <link rel="canonical" href={canonical} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="da_DK" />
+        <meta property="og:site_name" content="Kontorassistancen" />
+        <meta property="og:title" content="Kontorassistancen — Bogføring, moms og løn" />
+        <meta property="og:description" content="Kontorassistancen tilbyder professionel bogføring, momsregnskab og lønkørsel med personlig service siden 1992." />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://kontorassistancen.dk/img/header-red.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kontorassistancen — Bogføring, moms og løn" />
+        <meta name="twitter:description" content="Kontorassistancen tilbyder professionel bogføring, momsregnskab og lønkørsel med personlig service siden 1992." />
+        <meta name="twitter:image" content="https://kontorassistancen.dk/img/header-red.png" />
       </Helmet>
 
         <Hero></Hero>

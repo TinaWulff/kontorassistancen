@@ -16,6 +16,19 @@ export default function Lonkorsel() {
               <title>Lønkørsel — Kontorassistancen</title>
               <meta name="description" content="Professionel lønkørsel og lønadministration hos Kontorassistancen. Vi sikrer korrekt løn, skat og pension til tiden." />
               <link rel="canonical" href={canonical} />
+
+              <meta property="og:type" content="website" />
+              <meta property="og:locale" content="da_DK" />
+              <meta property="og:site_name" content="Kontorassistancen" />
+              <meta property="og:title" content="Lønkørsel — Kontorassistancen" />
+              <meta property="og:description" content="Professionel lønkørsel og lønadministration hos Kontorassistancen. Vi sikrer korrekt løn, skat og pension til tiden." />
+              <meta property="og:url" content={canonical} />
+              <meta property="og:image" content="https://kontorassistancen.dk/img/lonkorsel.jpg" />
+
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:title" content="Lønkørsel — Kontorassistancen" />
+              <meta name="twitter:description" content="Professionel lønkørsel og lønadministration hos Kontorassistancen. Vi sikrer korrekt løn, skat og pension til tiden." />
+              <meta name="twitter:image" content="https://kontorassistancen.dk/img/lonkorsel.jpg" />
             </Helmet>
             <ImageSection
                 image="/img/lonkorsel.jpg"

@@ -18,6 +18,19 @@ export default function OnlineBogforing() {
               <title>Online Bogføring — Kontorassistancen</title>
               <meta name="description" content="Online bogføring med Kontorassistancen giver dig løbende overblik over din økonomi, sikkert og fejlfrit i skyen." />
               <link rel="canonical" href={canonical} />
+
+              <meta property="og:type" content="website" />
+              <meta property="og:locale" content="da_DK" />
+              <meta property="og:site_name" content="Kontorassistancen" />
+              <meta property="og:title" content="Online Bogføring — Kontorassistancen" />
+              <meta property="og:description" content="Online bogføring med Kontorassistancen giver dig løbende overblik over din økonomi, sikkert og fejlfrit i skyen." />
+              <meta property="og:url" content={canonical} />
+              <meta property="og:image" content="https://kontorassistancen.dk/img/onlinebogforing.png" />
+
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:title" content="Online Bogføring — Kontorassistancen" />
+              <meta name="twitter:description" content="Online bogføring med Kontorassistancen giver dig løbende overblik over din økonomi, sikkert og fejlfrit i skyen." />
+              <meta name="twitter:image" content="https://kontorassistancen.dk/img/onlinebogforing.png" />
             </Helmet>
             <ImageSection
                 image="/img/onlinebogforing.png"
