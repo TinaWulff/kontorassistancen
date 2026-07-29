@@ -8,6 +8,7 @@ import OnlineBogforing from './pages/OnlineBogforing';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Tak from './pages/Tak';
+import Privatlivspolitik from './pages/Privatlivspolitik';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: '/tak',
                 element: <Tak />
+            },
+            {
+                path: '/privatlivspolitik',
+                element: <Privatlivspolitik />
             },
             {
                 path: '*',

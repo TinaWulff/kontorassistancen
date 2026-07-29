@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { z } from 'zod';
 
 // Valideringsskema med Zod
@@ -10,6 +11,9 @@ const schema = z.object({
     .regex(/^\d{8}$/, { message: 'Telefonnummer skal være 8 cifre' })
     .optional(),
   message: z.string().min(1, { message: 'Besked er påkrævet' }),
+  samtykke: z.literal(true, {
+    errorMap: () => ({ message: 'Du skal acceptere behandlingen af dine oplysninger for at sende beskeden' }),
+  }),
   'bot-field': z.string().optional(), // honeypot
 });
 
@@ -21,7 +25,9 @@ export default function ContactForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const formData = Object.fromEntries(new FormData(form).entries());
+    const formDataRaw = new FormData(form);
+    const formData = Object.fromEntries(formDataRaw.entries());
+    formData.samtykke = formDataRaw.get('samtykke') === 'on';
 
     // Zod-validering
     const result = schema.safeParse(formData);
@@ -82,6 +88,19 @@ export default function ContactForm() {
         {/* Besked */}
         <textarea name="message" placeholder="Eventuel besked*" />
         {errors.message && <p style={{ color: 'red' }}>{errors.message[0]}</p>}
+
+        {/* Samtykke til databehandling */}
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5em', fontSize: '14px' }}>
+          <input type="checkbox" name="samtykke" style={{ marginTop: '0.2em' }} />
+          <span>
+            Jeg accepterer, at mine oplysninger behandles som beskrevet i{' '}
+            <Link to="/privatlivspolitik" target="_blank" rel="noopener noreferrer">
+              privatlivspolitikken
+            </Link>
+            *
+          </span>
+        </label>
+        {errors.samtykke && <p style={{ color: 'red' }}>{errors.samtykke[0]}</p>}
 
         {/* Send-knap */}
         <button type="submit" disabled={isSubmitting}>

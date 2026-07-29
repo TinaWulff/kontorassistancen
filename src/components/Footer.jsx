@@ -4,6 +4,7 @@
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { MdPlace } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 import './footer.scss';
 
@@ -20,6 +21,7 @@ export default function Footer() {
         </li>
         <li><MdPlace className="icon"/>Vads Dal 19, 6973 Ørnhøj</li>
         <li><FaPhone className="icon"/>+45 60 15 77 12</li>
+        <li><Link to="/privatlivspolitik">Privatlivspolitik</Link></li>
         </ul>
         </>
     )
